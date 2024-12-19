@@ -1,0 +1,9 @@
+<select class="form-select my-5 w-25"  (change)="edtectChanges($event)">
+  <option value="All" selected>All</option>
+  @for(cat of data ;track cat) {
+
+    <option [value]="cat">{{cat}}</option>
+  }
+
+
+</select>

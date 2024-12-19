@@ -1,0 +1,27 @@
+<div class="bodyCard container">
+  <div class="discription">
+    <div class="taxt">
+
+      <h3>Shopping Now</h3>
+      <p>You have {{cardProduct.length}} item in your card</p>
+    </div>
+    <div class="btnn">
+      <button (click)="clearAllItem()">Clear sopping card</button>
+    </div>
+  </div>
+  <div class="mainbode"  *ngFor="let item of cardProduct ; let index = index">
+    <img src="{{item.item.image}}" alt="">
+    <p>Title : {{item.item.title}}</p>
+    <p>Quantity : {{item.quantity}} </p>
+    <p>Price : {{item.item.price}} L.E</p>
+    <button class="btn btn-danger" (click)="deletItem(index)">Delete</button>
+
+  </div>
+  <div class="footer ">
+    <p>Total : {{tatal}} L.E</p>
+    <button class="btn btn-success" (click)="addCard()">Order Now</button>
+  </div>
+</div>
+<div class="alert alert-success" role="alert" *ngIf="success">
+<strong>Well Done!</strong> Your Order Is Successfully Send
+</div>

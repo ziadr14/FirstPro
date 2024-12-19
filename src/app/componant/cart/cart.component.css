@@ -1,0 +1,60 @@
+.bodyCard {
+  border: 1px solid #ddd;
+  padding: 20px;
+}
+
+.discription {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.mainbode {
+  background-color: #ddd;
+  padding: 20px;
+}
+
+img {
+  width: 80px;
+  height: 80px;
+  border-radius: 10px;
+}
+
+.btnn button {
+  border: none;
+  padding: 6px 16px;
+  border-radius: 10px;
+}
+
+.quantity {
+  display: flex;
+  align-items: center;
+  margin: 10px;
+}
+
+.mainbode {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 20px;
+}
+
+.footer {
+  display: flex;
+  margin: 30px;
+  justify-content: space-between;
+}
+
+@media (max-width: 1000px) {
+  .mainbode {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 445px) {
+  .discription,
+  .footer {
+    flex-direction: column;
+    margin: 20px;
+  }
+}

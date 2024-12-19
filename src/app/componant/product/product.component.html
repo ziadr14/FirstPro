@@ -1,0 +1,22 @@
+
+
+
+
+<div class="box pt-5 ">
+
+  <app-select [data]="category" (selection)="filterCat($event)"></app-select>
+  <div class="row" *ngIf="!loading">
+    @for(pro of product ; track pro.id) {
+
+      <div class="col-lg-4 col-sm-6 col-xl-3" >
+        <app-product1 [data]="pro" (item)="addToCard($event)"></app-product1>
+
+
+      </div>
+    }
+  </div >
+  <div class="text-center w-100" *ngIf="loading">
+    <app-spinner></app-spinner>
+  </div>
+</div>
+
